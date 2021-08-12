@@ -2,7 +2,7 @@ import React from "react"
 import Navbar from "../components/Navbar"
 import Mainpage from "../components/Mainpage"
 import Footer from "../components/Footer"
-import SEO from "../components/SEO"
+import SEO from "../Helper/SEO"
 import { LanguageProvider } from "../Helper/LanguageContext"
 
 export default function Home() {

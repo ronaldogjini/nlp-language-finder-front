@@ -8,7 +8,7 @@ function Navbar() {
 
     const [isOpen, setIsOpen] = useState(false);
     return (
-        <nav className="bg-black fixed w-full shadow-md z-50">
+        <nav className="bg-black w-full shadow-md z-50">
             <div className=" mx-auto max-w-screen-xl px-4 sm:px-0 lg:px-0">
                 <div className="flex items-center h-16">
                     <div className="flex justify-center items-center w-full">
@@ -28,11 +28,6 @@ function Navbar() {
                                 </Link>
                             </div>
                         </div>
-                        {/* <div className="hidden md:block ">
-                            <div className="ml-10 flex items-baseline space-x-4">
-                                <Link className="text-black hover:bg-gray-200 px-3 py-2 rounded-md text-md font-medium" to="/about">About</Link>
-                            </div>
-                        </div> */}
                     </div>
                     <div className="-mr-2 flex md:hidden">
                         <button
