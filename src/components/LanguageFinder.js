@@ -17,7 +17,7 @@ function LanguageFinder() {
         setClicked(true)
 
         const options = { headers: { "content-type": "application/json" } }
-        axios.post('http://localhost:8080/language',
+        axios.post('https://whatlanguageisthis-backend.herokuapp.com/language',
             text,
             options
         )
