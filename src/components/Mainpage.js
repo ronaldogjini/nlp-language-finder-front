@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import LanguageFinder from './LanguageFinder'
 import { StaticImage } from 'gatsby-plugin-image'
+import { LanguageContext } from '../Helper/LanguageContext'
+import LanguageResult from './LanguageResult'
+
 function Mainpage() {
+    const [language, setLanguage] = useContext(LanguageContext)
     return (
         <div className=" max-w-screen-2xl mx-auto grid h-screen grid-cols-1 md:grid-cols-2 py-16">
 
@@ -13,16 +17,16 @@ function Mainpage() {
                     </div>
                     <LanguageFinder />
                 </div>
-
             </div>
-            <div className=" hidden md:flex w-full flex items-center justify-center">
-                <StaticImage
-                    placeholder="dominantColor"
-                    width={600}
-                    className="fancy-border float-up-down"
-                    src="../images/isometric-illustration.webp"
+            <div className=" hidden md:flex w-full flex flex-col items-center justify-center">
+                <img
+                    className="my-8 h-56"
+                    src={`../../flags/${language}.webp`}
                     alt="Language Identifier">
-                </StaticImage>
+                </img>
+                <div className="hidden md:block text-center">
+                    <LanguageResult></LanguageResult>
+                </div>
             </div>
         </div>
     )
